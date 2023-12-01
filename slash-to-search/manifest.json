@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Slash to Search",
+  "description": "Simply press / to start typing in the search bar without clicking it with the mouse first.",
+  "version": "1.0.0",
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "action": {
+    "default_popup": "popup/popup.html"
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "scripts/content.js"
+      ],
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ]
+    }
+  ],
+  "permissions": [
+    "storage"
+  ]
+}

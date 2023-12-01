@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="popup.css" />
+</head>
+
+<body class="flex-col align-items-center">
+    <header class="flex-col justify-content-center">
+        <h1>Slash to Search</h1>
+    </header>
+
+    <main>
+        <div class="tab">
+            <ul class="container__list full-height">
+                <li class="container__item flex-col all-center full-height container__item_active">
+                    <span class="material-symbols-outlined">keyboard</span>
+                </li>
+                <li class="container__item flex-col all-center full-height">
+                    <span class="material-symbols-outlined">pageview</span>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="container__inner">
+                <div class="content__subtitle text-align-left">
+                    <p>Press <span class="key" id="nonResetKey">/</span> to focus the search bar.</p>
+                    <p>Press <span class="key" id="resetKey">?</span> to focus with content reset.</p>
+                </div>
+                <div class="content__description">
+                    <div class="flex-space-between">
+                        <span>Swap Keys</span>
+                        <div class="vc-toggle-container">
+                            <label class="vc-switch">
+                                <input id="swap-checkbox" type="checkbox" class="vc-switch-input" />
+                                <span class="vc-switch-label"></span>
+                                <span class="vc-handle"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container__inner container__inner_hidden">
+                <div class="content__subtitle text-align-left">
+                    <p>Use select mode on websites where the extension can't automatically find the search bar upon
+                        key press.</p>
+                    <p>Enable select mode and select the site's search bar by clicking it.</p>
+                </div>
+                <div class="content__description">
+                    <div class="flex-space-between">
+                        <span>Select Mode</span>
+                        <div class="vc-toggle-container">
+                            <label class="vc-switch">
+                                <input id="select-mode-checkbox" type="checkbox" class="vc-switch-input" />
+                                <span class="vc-switch-label"></span>
+                                <span class="vc-handle"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <input type="text" id="search-box" class="full-width" placeholder="Search sites...">
+                    <div id="list-container">
+                        <div class="flex-col all-center full-height" id="empty-message">
+                            <span>Websites that have a selected search bar will be shown here.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </d>
+    </main>
+
+    <footer>
+        <div id="github-button" class="flex-space-between align-items-center">
+            <i class="fa fa-github"></i>
+            <span>GitHub</span>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="popup.js"></script>
+</body>
+
+</html>
